@@ -99,6 +99,13 @@ class ViewController: UIViewController {
         roundNum = 0
         totalScore = 0
         startNewRound()
+        
+        let transition = CATransition()
+        transition.type = CATransitionType.fade
+        transition.duration = 0.3
+        transition.timingFunction = CAMediaTimingFunction(
+            name: CAMediaTimingFunctionName.easeOut)
+        view.layer.add(transition, forKey: nil)
     }
     
     func updateLabels() {
